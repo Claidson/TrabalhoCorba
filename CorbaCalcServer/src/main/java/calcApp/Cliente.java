@@ -5,7 +5,7 @@
  */
 package calcApp;
 
-
+import java.util.Properties;
 import org.omg.CosNaming.NamingContextPackage.CannotProceed;
 import org.omg.CosNaming.NamingContextPackage.InvalidName;
 
@@ -16,7 +16,14 @@ import org.omg.CosNaming.NamingContextPackage.InvalidName;
 public class Cliente {
 
     public static void main(String[] args) {
-        org.omg.CORBA.ORB orb = org.omg.CORBA.ORB.init(args, null);
+        Properties prop = new Properties();
+        prop.put("org.omg.CORBA.ORBInitialHost", "10.151.34.132");
+        prop.put("org.omg.CORBA.ORBInitialPort", "1050");
+      
+
+        org.omg.CORBA.ORB orb = org.omg.CORBA.ORB.init(args, prop);
+  
+        
         org.omg.CORBA.Object obj = null;
         org.omg.CosNaming.NamingContext naming = null;
 
@@ -53,7 +60,7 @@ public class Cliente {
             System.out.println("1/1 :" + calc.div(1, 2));
         } catch (org.omg.CORBA.SystemException e) {
             System.out.println("Erro ao calcular no cliente CORBA " + e.getMessage());
-            
+
         }
 
     }

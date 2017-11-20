@@ -5,25 +5,37 @@
  */
 package calcApp;
 
+import java.util.Properties;
 
 /**
- *http://www.dca.fee.unicamp.br/cursos/PooJava/objdist/idlexemplo.html
+ * http://www.dca.fee.unicamp.br/cursos/PooJava/objdist/idlexemplo.html
  * https://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlExample.html
  * http://www.it.uc3m.es/mcfp/docencia/si/material/7b_invocacionEstatica_mcfp.pdf
  * https://pt.slideshare.net/Goncalvinho/artigo-distribuidos-programao-java-com-rmi-e-cobra
  * http://www.inf.ufsc.br/~bosco.sobral/old_page/downloads/comp_obj_dist.htm
+ * http://www.batebyte.pr.gov.br/modules/conteudo/conteudo.php?conteudo=286
+ * sudo orbd -ORBInitialPort 900 -ORBInitialHost 10.151.34.132
  * start tnameserv -ORBInitialPort 5000
+ *
  * @author Claidson
  */
 public class ServerPoa {
 
     public static void main(String[] args) {
-        org.omg.CORBA.ORB orb = org.omg.CORBA.ORB.init(args, null);
+//        System.setProperty("org.omg.CORBA.ORBInitialHost", "127.0.0.1");
+//        System.setProperty("org.omg.CORBA.ORBInitialPort", "6000");
+        Properties prop = new Properties();
+       prop.put("org.omg.CORBA.ORBInitialHost", "10.151.34.132");
+       // prop.put("org.omg.CORBA.ORBInitialHost", "localhost");
+        prop.put("org.omg.CORBA.ORBInitialPort", "1050");
+
+        org.omg.CORBA.ORB orb = org.omg.CORBA.ORB.init(args, prop);
+      
+
         org.omg.CORBA.Object objPoa = null;
         org.omg.PortableServer.POA rootPOA = null;
         try {
             objPoa = orb.resolve_initial_references("RootPOA");
-            
 
         } catch (org.omg.CORBA.ORBPackage.InvalidName e) {
             System.out.println("Pau no nome server: " + e.getMessage());
@@ -43,6 +55,7 @@ public class ServerPoa {
 
             } catch (org.omg.CORBA.ORBPackage.InvalidName nome) {
                 System.out.println("Naming service não localizado");
+                nome.printStackTrace();
                 System.exit(0);
             }
             org.omg.CosNaming.NameComponent[] nome = new org.omg.CosNaming.NameComponent[1];
