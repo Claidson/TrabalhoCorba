@@ -14,6 +14,8 @@ import java.util.Properties;
  * https://pt.slideshare.net/Goncalvinho/artigo-distribuidos-programao-java-com-rmi-e-cobra
  * http://www.inf.ufsc.br/~bosco.sobral/old_page/downloads/comp_obj_dist.htm
  * http://www.batebyte.pr.gov.br/modules/conteudo/conteudo.php?conteudo=286
+ * http://code.activestate.com/recipes/81254-implement-a-corba-client-and-server/
+ * https://github.com/troeger/corba-example
  * sudo orbd -ORBInitialPort 900 -ORBInitialHost 10.151.34.132
  * start tnameserv -ORBInitialPort 5000
  *
