@@ -7,7 +7,12 @@ package calcApp;
 
 
 /**
- *
+ *http://www.dca.fee.unicamp.br/cursos/PooJava/objdist/idlexemplo.html
+ * https://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlExample.html
+ * http://www.it.uc3m.es/mcfp/docencia/si/material/7b_invocacionEstatica_mcfp.pdf
+ * https://pt.slideshare.net/Goncalvinho/artigo-distribuidos-programao-java-com-rmi-e-cobra
+ * http://www.inf.ufsc.br/~bosco.sobral/old_page/downloads/comp_obj_dist.htm
+ * start tnameserv -ORBInitialPort 5000
  * @author Claidson
  */
 public class ServerPoa {
