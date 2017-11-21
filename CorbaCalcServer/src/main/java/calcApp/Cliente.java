@@ -17,7 +17,7 @@ public class Cliente {
 
     public static void main(String[] args) {
         Properties prop = new Properties();
-        prop.put("org.omg.CORBA.ORBInitialHost", "10.151.34.132");
+        prop.put("org.omg.CORBA.ORBInitialHost", "192.168.1.4");
         prop.put("org.omg.CORBA.ORBInitialPort", "1050");
       
 

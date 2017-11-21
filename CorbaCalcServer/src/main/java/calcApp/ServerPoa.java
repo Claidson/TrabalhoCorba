@@ -16,6 +16,9 @@ import java.util.Properties;
  * http://www.batebyte.pr.gov.br/modules/conteudo/conteudo.php?conteudo=286
  * http://code.activestate.com/recipes/81254-implement-a-corba-client-and-server/
  * https://github.com/troeger/corba-example
+ * http://legionti.blogspot.com.br/2010/11/como-utilizar-o-omniorb-no-ubuntu.html
+ * http://www.inf.ufsc.br/~frank.siqueira/INE5418/CORBA-Banco/index.htm
+ * https://projects.gnome.org/ORBit2/orbit-docs/orbit/x478.html
  * sudo orbd -ORBInitialPort 900 -ORBInitialHost 10.151.34.132
  * start tnameserv -ORBInitialPort 5000
  *
@@ -27,7 +30,7 @@ public class ServerPoa {
 //        System.setProperty("org.omg.CORBA.ORBInitialHost", "127.0.0.1");
 //        System.setProperty("org.omg.CORBA.ORBInitialPort", "6000");
         Properties prop = new Properties();
-       prop.put("org.omg.CORBA.ORBInitialHost", "10.151.34.132");
+       prop.put("org.omg.CORBA.ORBInitialHost", "192.168.1.4");
        // prop.put("org.omg.CORBA.ORBInitialHost", "localhost");
         prop.put("org.omg.CORBA.ORBInitialPort", "1050");
 
