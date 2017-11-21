@@ -19,8 +19,14 @@ import java.util.Properties;
  * http://legionti.blogspot.com.br/2010/11/como-utilizar-o-omniorb-no-ubuntu.html
  * http://www.inf.ufsc.br/~frank.siqueira/INE5418/CORBA-Banco/index.htm
  * https://projects.gnome.org/ORBit2/orbit-docs/orbit/x478.html
+ * http://xennis.org/wiki/CORBA
+ * http://www.yolinux.com/TUTORIALS/CORBA.html
  * sudo orbd -ORBInitialPort 900 -ORBInitialHost 10.151.34.132
- * start tnameserv -ORBInitialPort 5000
+ * start tnameserv -ORBInitialPort 1050
+ * orbd -ORBInitialPort 1050 &
+ * Para fazer a comunicação entre máquinas diferentes, 
+ * indique ao cliente que o ORB estará rodando em outro computador:
+ * java cliente -ORBInitialHost <IP do computador> -ORBInitialPort 1050
  *
  * @author Claidson
  */
