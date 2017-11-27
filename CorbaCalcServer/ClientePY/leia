@@ -1,0 +1,14 @@
+../configure --prefix=/home/aluno/Documentos/Claidson/Fase6/Sistemas_distribuidos/TrabalhoCorba/CorbaCalcCliente/python/envPY/omniorbInstall/ PYTHON=/home/aluno/Documentos/Claidson/Fase6/Sistemas_distribuidos/TrabalhoCorba/CorbaCalcCliente/python/envPY/bin/python 
+
+
+ ../configure --prefix=/home/aluno/Documentos/Claidson/Fase6/Sistemas_distribuidos/TrabalhoCorba/CorbaCalcCliente/python/envPY/omniorbInstall/ PYTHON=/home/aluno/Documentos/Claidson/Fase6/Sistemas_distribuidos/TrabalhoCorba/CorbaCalcCliente/python/envPY/bin/python  --with-omniorb=/home/aluno/Documentos/Claidson/Fase6/Sistemas_distribuidos/TrabalhoCorba/CorbaCalcCliente/python/envPY/omniorbInstall
+
+
+$ cat lib/python2.6/site-packages/omniorb.pth /home/aluno/Documentos/Claidson/Fase6/Sistemas_distribuidos/TrabalhoCorba/CorbaCalcCliente/python/envPY/omniorbInstall/lib/python2.7/site-packages
+
+
+sudo apt-get install  python-omniorb omniidl-python
+sudo apt-get install omniidl omniorb omniorb-nameserver omniorb-idl libomniorb4-dev libomniorb4-1
+sudo apt-get install python-dev
+sudo apt-get install bpython
+

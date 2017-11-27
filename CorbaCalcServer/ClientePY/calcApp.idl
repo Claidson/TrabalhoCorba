@@ -1,0 +1,11 @@
+
+
+module calcApp{
+
+interface calc{
+float soma(in float n1, in float n2);
+float sub (in float n1, in float n2);
+float multi (in float n1, in float n2);
+float div (in float n1, in float n2);
+};
+};
